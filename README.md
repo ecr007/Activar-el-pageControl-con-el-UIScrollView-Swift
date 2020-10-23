@@ -15,7 +15,7 @@ objPageControl.addTarget(self, action: #selector(pageControlDidChange(_:))), for
 
 scrollObject.delegate = self
 
-// Especificamente se llama al delegado ::: para pasarle la info al pageControl
+// Especificamente se llama al delegado : UIScrollViewDelegate para pasarle la info al pageControl
 
 func scrollViewDidScroll(_ scrollView: UIScrollView){
 	pageControl.currentPage = Int( floorf( Float( scrollView.contentOffset.x ) / Float( scrollView.frame.size.width ) ) )
